@@ -62,6 +62,10 @@ for key, value in date_dict.items():
     if value == user_date:
         keys.append(key)
 
+# Report whether no keys were found
+if len(keys) == 0:
+    print(f"Sara was not located on {user_date}")
+
 #Reveal locations for each key in matching_keys
 for key in keys:
     lat, lng = location_dict[key]
